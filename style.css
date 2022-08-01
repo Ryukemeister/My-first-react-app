@@ -3,3 +3,30 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.main {
+  border: 2px solid red;
+  height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  border: 2px solid red;
+}
+
+.list-contents {
+  display: flex;
+  height: 70px;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  margin: 0 15px 0 0;
+  color: black;
+}
