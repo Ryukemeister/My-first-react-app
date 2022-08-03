@@ -130,7 +130,10 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
-*/
+
+// JSX always returns plain JavaScript objects
+root.append(JSON.stringify(pageOne));
+console.log(JSON.stringify(pageOne));
 
 const navbar = (
   <nav>
@@ -143,4 +146,82 @@ const navbar = (
   </nav>
 );
 
-ReactDOM.render(navbar, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const pageOne = (
+  <div>
+    <h1>Hi there, this is try one</h1>
+    <h2>Hello, this one's try two</h2>
+    <ul>
+      <li>Pricing</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <ol>
+      <li>Pricing</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ol>
+  </div>
+);
+
+// Using createRoot instead of ReactDOM.render
+// root.render(pageOne);
+*/
+
+// React 17 method of rendering
+// ReactDOM.render(navbar, document.getElementById("root"));
+
+// Bob's way of rendering in React 18
+// ReactDOM.createRoot(document.getElementById("root")).render(navbar);
+
+// Official documention of using createRoot in react 18
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(navbar);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+function FunfactsAboutReact() {
+  return (
+    <section>
+      <nav className="navbar">
+        <img
+          className="react-logo"
+          src="./React logo.png"
+          style={{
+            marginLeft: 30 + "px",
+            marginTop: 15 + "px",
+          }}
+        ></img>
+      </nav>
+      <main>
+        <h1
+          className="title"
+          style={{
+            marginLeft: 30 + "px",
+            fontSize: 55 + "px",
+          }}
+        >
+          Fun facts about React
+        </h1>
+        <ul
+          className="list "
+          style={{
+            marginLeft: 50 + "px",
+          }}
+        >
+          <li className="list-element">Was first released in 2013</li>
+          <li className="list-element">
+            Was originally created by Jordan Walke{" "}
+          </li>
+          <li className="list-element">Has well over 100k stars on Github</li>
+          <li className="list-element">Is maintained by Facebook</li>
+          <li className="list-element">
+            Powered thousands of enterprise apps, including mobile apps
+          </li>
+        </ul>
+      </main>
+    </section>
+  );
+}
+
+root.render(<FunfactsAboutReact />);
