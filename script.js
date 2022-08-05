@@ -253,17 +253,6 @@ const FactsAboutReactPage = (
     </main>
   </section>
 );
-*/
-
-// React 17 method of rendering
-// ReactDOM.render(navbar, document.getElementById("root"));
-
-// Bob's way of rendering in React 18
-// ReactDOM.createRoot(document.getElementById("root")).render(navbar);
-
-// Official documention of using createRoot in react 18
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(navbar);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -284,3 +273,42 @@ const ReactPage = (
 );
 
 root.render(ReactPage);
+*/
+
+// React 17 method of rendering
+// ReactDOM.render(navbar, document.getElementById("root"));
+
+// Bob's way of rendering in React 18
+// ReactDOM.createRoot(document.getElementById("root")).render(navbar);
+
+// Official documention of using createRoot in react 18
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(navbar);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+function Page() {
+  return (
+    <div>
+      <header>
+        <nav>
+          <img src="React logo.png" alt="React logo"></img>
+        </nav>
+      </header>
+      <h1>Reasons I'm excited to learn React</h1>
+      <ol>
+        <li>It'll take my web dev game to the next level.</li>
+        <li>It's gonna give me more job opportunities.</li>
+        <li>More opportunities means more money.</li>
+        <li>More money means more freedom.</li>
+        <li>More freedom means more purchasing power.</li>
+        <li>More purchasing power means more happiness for me.</li>
+      </ol>
+      <footer>
+        <small> © 2022 Sahal development. All rights reserved.</small>
+      </footer>
+    </div>
+  );
+}
+
+root.render(<Page />);
