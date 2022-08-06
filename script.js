@@ -1,3 +1,6 @@
+// import Navbar from "./nav";
+// import Main from "./main";
+
 /*
 function Navbar() {
   return (
@@ -273,6 +276,8 @@ const ReactPage = (
 );
 
 root.render(ReactPage);
+
+
 */
 
 // React 17 method of rendering
@@ -287,14 +292,24 @@ root.render(ReactPage);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-function Page() {
+function Header() {
   return (
-    <div>
-      <header>
-        <nav>
-          <img src="React logo.png" alt="React logo"></img>
-        </nav>
-      </header>
+    <header>
+      <nav className="nav">
+        <img className="nav-logo" src="React logo.png" alt="React logo"></img>
+        <ul className="list-items">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+function MainContent() {
+  return (
+    <main>
       <h1>Reasons I'm excited to learn React</h1>
       <ol>
         <li>It'll take my web dev game to the next level.</li>
@@ -304,9 +319,24 @@ function Page() {
         <li>More freedom means more purchasing power.</li>
         <li>More purchasing power means more happiness for me.</li>
       </ol>
-      <footer>
-        <small> © 2022 Sahal development. All rights reserved.</small>
-      </footer>
+    </main>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <small> © 2022 Sahal development. All rights reserved.</small>
+    </footer>
+  );
+}
+
+function Page() {
+  return (
+    <div>
+      <Header />
+      <MainContent />
+      <Footer />
     </div>
   );
 }
