@@ -1,0 +1,31 @@
+.main {
+  background-color: #282d35;
+  color: white;
+  height: 469px;
+  padding: 50px 0 0 25px;
+  background-image: url("./src/assets/React half icon.png");
+  background-position: right 75%;
+  background-repeat: no-repeat;
+}
+
+.main-title {
+  margin-top: 0;
+  font-size: 40px;
+  letter-spacing: -0.05em;
+}
+
+.facts-list {
+  list-style: none;
+  /*max-width: 300px;*/
+}
+
+.facts-list > li {
+  padding-block: 10px;
+  padding-left: 10px;
+}
+
+.facts-list > li::marker {
+  color: #61dafb;
+  font-size: 1.4rem;
+  content: "\2022";
+}
